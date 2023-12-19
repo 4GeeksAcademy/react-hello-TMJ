@@ -1,24 +1,51 @@
 import React from "react";
-
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
+import Navbar from "./navbar";
+import Jumbotron from "./jumbotron";
+import Cards from "./card";
+import Footer from "./footer";
 
 //create your first component
 const Home = () => {
 	return (
 		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
+			<Navbar/>
+		<div className="container">
+			<div>
+				<Jumbotron/>
+			</div>
+			<div className="row">
+				<div className="col-3">
+					<Cards
+					image = "https://picsum.photos/500/325?random=1"
+					cardName = "Card 1"
+					text = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum commodi laborum, exercitationem eligendi et laudantium consectetur. Maiores nisi error omnis vitae earum, illum, dolorum architecto ipsa in neque illo laboriosam."
+					/>
+				</div>
+				<div className="col-3">
+					<Cards
+					image = "https://picsum.photos/500/325?random=2"
+					cardName = "Card 2"
+					text = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum commodi laborum, exercitationem eligendi et laudantium consectetur. Maiores nisi error omnis vitae earum, illum, dolorum architecto ipsa in neque illo laboriosam."
+					/>
+				</div>
+				<div className="col-3">
+					<Cards
+					image = "https://picsum.photos/500/325?random=3"
+					cardName = "Card 3"
+					text = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum commodi laborum, exercitationem eligendi et laudantium consectetur. Maiores nisi error omnis vitae earum, illum, dolorum architecto ipsa in neque illo laboriosam."
+					/>
+				</div>
+				<div className="col-3">
+					<Cards
+					image = "https://picsum.photos/500/325?random=4"
+					cardName = "Card 4"
+					text = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum commodi laborum, exercitationem eligendi et laudantium consectetur. Maiores nisi error omnis vitae earum, illum, dolorum architecto ipsa in neque illo laboriosam."
+					/>
+				</div>
+				
+			</div>
+		</div>	
+			<Footer/>
 		</div>
 	);
 };
